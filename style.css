@@ -87,7 +87,7 @@ button {
 
 .map-orbit {
   position: absolute;
-  inset: -9%;
+  inset: -42%;
   z-index: 0;
   transform-origin: center;
   transition: filter 1200ms ease;
@@ -439,7 +439,7 @@ h1 {
   }
 
   .map-orbit {
-    inset: -14%;
+    inset: -58%;
   }
 
   .map-image {

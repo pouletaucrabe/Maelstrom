@@ -87,11 +87,9 @@ button {
 
 .map-orbit {
   position: absolute;
-  inset: -42%;
+  inset: 0;
   z-index: 0;
-  transform-origin: center;
   transition: filter 1200ms ease;
-  will-change: transform;
 }
 
 .map-image {
@@ -105,11 +103,11 @@ button {
 
 .vortex {
   position: absolute;
-  inset: 0;
+  inset: -20%;
   pointer-events: none;
   background:
-    radial-gradient(circle at center, rgba(245, 231, 200, 0.32) 0 4%, rgba(8, 55, 57, 0.22) 10%, transparent 22%),
-    conic-gradient(from 20deg, transparent, rgba(13, 80, 83, 0.28), transparent, rgba(189, 79, 47, 0.18), transparent);
+    radial-gradient(circle at center, rgba(7, 186, 196, 0.2) 0 5%, rgba(2, 58, 75, 0.18) 11%, transparent 27%),
+    conic-gradient(from 20deg, transparent 0deg 36deg, rgba(18, 120, 137, 0.24) 58deg, transparent 92deg, rgba(3, 25, 46, 0.34) 138deg, transparent 190deg, rgba(10, 92, 110, 0.22) 246deg, transparent 312deg);
   mix-blend-mode: multiply;
   opacity: 0;
   transform-origin: center;
@@ -314,7 +312,6 @@ h1 {
 
 .gate.spinning .map-orbit {
   filter: brightness(0.72) saturate(1.18);
-  animation: map-whirlpool 3200ms cubic-bezier(0.42, 0, 0.08, 1) forwards;
 }
 
 .gate.flipped .abyss-wash {
@@ -362,16 +359,6 @@ h1 {
   }
 }
 
-@keyframes map-whirlpool {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-
-  100% {
-    transform: rotate(540deg) scale(1.16);
-  }
-}
-
 @keyframes vortex-bloom {
   0% {
     opacity: 0;
@@ -379,8 +366,8 @@ h1 {
   }
 
   100% {
-    opacity: 0.9;
-    transform: scale(1.7) rotate(-360deg);
+    opacity: 1;
+    transform: scale(1.58) rotate(-540deg);
   }
 }
 
@@ -439,7 +426,7 @@ h1 {
   }
 
   .map-orbit {
-    inset: -58%;
+    inset: 0;
   }
 
   .map-image {

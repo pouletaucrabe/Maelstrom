@@ -90,8 +90,8 @@ button {
   inset: -9%;
   z-index: 0;
   transform-origin: center;
-  transition: transform 1600ms cubic-bezier(0.65, 0, 0.15, 1), filter 1200ms ease;
-  will-change: transform, filter;
+  transition: filter 1200ms ease;
+  will-change: transform;
 }
 
 .map-image {
@@ -313,7 +313,8 @@ h1 {
 }
 
 .gate.spinning .map-orbit {
-  animation: map-whirlpool 2400ms cubic-bezier(0.62, 0, 0.14, 1) forwards;
+  filter: brightness(0.72) saturate(1.18);
+  animation: map-whirlpool 3200ms cubic-bezier(0.42, 0, 0.08, 1) forwards;
 }
 
 .gate.flipped .abyss-wash {
@@ -325,7 +326,7 @@ h1 {
 }
 
 .gate.spinning .vortex {
-  animation: vortex-bloom 2400ms cubic-bezier(0.62, 0, 0.14, 1) forwards;
+  animation: vortex-bloom 3200ms cubic-bezier(0.42, 0, 0.08, 1) forwards;
 }
 
 .gate.flipped .disc-flip {
@@ -337,11 +338,11 @@ h1 {
 }
 
 .gate.spinning .disc-flip {
-  animation: disc-counter-whirlpool 2400ms cubic-bezier(0.62, 0, 0.14, 1) forwards;
+  animation: disc-counter-whirlpool 3200ms cubic-bezier(0.42, 0, 0.08, 1) forwards;
 }
 
 .gate.spinning .disc-lettering {
-  animation: lettering-whirlpool 2400ms cubic-bezier(0.62, 0, 0.14, 1) forwards;
+  animation: lettering-whirlpool 3200ms cubic-bezier(0.42, 0, 0.08, 1) forwards;
 }
 
 .gate.revealed .map-disc-button {
@@ -363,23 +364,11 @@ h1 {
 
 @keyframes map-whirlpool {
   0% {
-    filter: brightness(1) saturate(1);
     transform: rotate(0deg) scale(1);
   }
 
-  38% {
-    filter: brightness(0.88) saturate(1.08);
-    transform: rotate(150deg) scale(1.05);
-  }
-
-  72% {
-    filter: brightness(0.76) saturate(1.16);
-    transform: rotate(520deg) scale(1.15);
-  }
-
   100% {
-    filter: brightness(0.72) saturate(1.18);
-    transform: rotate(720deg) scale(1.2);
+    transform: rotate(540deg) scale(1.16);
   }
 }
 
@@ -389,19 +378,9 @@ h1 {
     transform: scale(0.45) rotate(0deg);
   }
 
-  35% {
-    opacity: 0.52;
-    transform: scale(1.05) rotate(-120deg);
-  }
-
-  72% {
-    opacity: 0.9;
-    transform: scale(1.62) rotate(-315deg);
-  }
-
   100% {
-    opacity: 1;
-    transform: scale(1.9) rotate(-420deg);
+    opacity: 0.9;
+    transform: scale(1.7) rotate(-360deg);
   }
 }
 
@@ -410,16 +389,8 @@ h1 {
     transform: rotate(180deg) scale(1);
   }
 
-  38% {
-    transform: rotate(-60deg) scale(0.96);
-  }
-
-  72% {
-    transform: rotate(-500deg) scale(0.82);
-  }
-
   100% {
-    transform: rotate(-720deg) scale(0.74);
+    transform: rotate(-540deg) scale(0.78);
   }
 }
 
@@ -428,16 +399,8 @@ h1 {
     transform: rotate(-180deg) scale(1);
   }
 
-  38% {
-    transform: rotate(90deg) scale(0.96);
-  }
-
-  72% {
-    transform: rotate(540deg) scale(0.82);
-  }
-
   100% {
-    transform: rotate(720deg) scale(0.74);
+    transform: rotate(540deg) scale(0.78);
   }
 }
 
